@@ -1,0 +1,62 @@
+# URassist - Requirements File
+# Python 3.8+ required
+
+# Core Dependencies
+eel==0.18.2                          # Python-JavaScript bridge for desktop apps
+flask==3.1.2                         # Web framework (used by Eel)
+bottle==0.13.4                       # Alternative web server support
+bottle-websocket==0.2.9              # WebSocket support
+
+# Audio & Voice Processing
+sounddevice==0.5.0                   # Audio input/output
+scipy==1.17.0                        # Scientific computing (audio processing)
+pvporcupine==3.0.0                   # Wake word detection
+winsound>=0                           # Windows sound (built-in, no install needed)
+pyttsx3>=2.90                         # Text-to-speech
+librosa>=0.10.0                       # Audio analysis
+
+# AI & ML
+hugchat==0.5.1                       # HugChat integration
+google-generativeai>=0.3.0            # Google Gemini API
+
+# Web & HTTP
+requests>=2.31.0                      # HTTP requests
+urllib3>=2.0.0                        # URL handling
+charset-normalizer>=3.4.0             # Character encoding
+
+# Data Processing
+beautifulsoup4==4.14.3               # HTML parsing
+numpy>=1.24.0                         # Numerical computing
+
+# Database
+sqlite3>=3.0                          # SQLite (built-in, no install needed)
+
+# System & Automation
+pyautogui>=0.9.53                     # GUI automation
+comtypes>=1.4.15                      # Windows COM interface
+pywin32>=305                          # Windows specific tools
+
+# Utilities
+python-dotenv>=1.0.0                  # Environment variable management
+colorama==0.4.6                       # Terminal colors
+click==8.3.1                          # CLI utilities
+blinker==1.9.0                        # Signal support
+future==1.0.0                         # Python 2/3 compatibility
+
+# OpenCV (optional, for image processing)
+# opencv-python>=4.8.0
+
+# Additional Optional Dependencies
+# certifi>=2026.1.4                   # SSL certificates
+# idna>=3.11                          # Domain name encoding
+# itsdangerous>=2.2.0                 # Data signing
+# jinja2>=3.1.6                       # Template engine
+# markupsafe>=3.0.3                   # Safe string marking
+# gevent>=25.9.1                      # Coroutine-based networking
+# greenlet>=3.3.1                     # Lightweight pseudo-threads
+
+# Development Dependencies (uncomment for development)
+# pytest>=7.0.0                       # Testing framework
+# black>=23.0.0                       # Code formatter
+# flake8>=6.0.0                       # Linter
+# pylint>=3.0.0                       # Code analysis
