@@ -1,4 +1,9 @@
 $(document).ready(function () {
+    const assetImages = [
+        "assests/img/Screenshot%202026-07-05%20154215.png",
+        "assests/img/Screenshot%202026-07-05%20154413.png"
+    ];
+    let assetImageIndex = 0;
 
     function setSiriMessage(text) {
         if (window.updateSiriMessage) {
@@ -45,6 +50,25 @@ $(document).ready(function () {
         },
 
     });
+
+    function rotateAssetImage() {
+        const imageElement = document.getElementById("assetShowcaseImage");
+        if (!imageElement || assetImages.length === 0) {
+            return;
+        }
+
+        assetImageIndex = (assetImageIndex + 1) % assetImages.length;
+        imageElement.classList.add("asset-showcase--fade");
+
+        setTimeout(function () {
+            imageElement.src = assetImages[assetImageIndex];
+            imageElement.classList.remove("asset-showcase--fade");
+        }, 180);
+    }
+
+    if (document.getElementById("assetShowcaseImage")) {
+        setInterval(rotateAssetImage, 4000);
+    }
 
     // mic button click event
 

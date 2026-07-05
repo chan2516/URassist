@@ -2,7 +2,8 @@
 
 <div align="center">
 
-![URassist](https://via.placeholder.com/600x300?text=URassist+AI+Voice+Assistant)
+![URassist](www/assests/img/Screenshot%202026-07-05%20154215.png)
+![URassist](www/assests/img/Screenshot%202026-07-05%20154413.png)
 
 **A powerful desktop AI voice assistant with multi-provider support and modern web UI**
 
