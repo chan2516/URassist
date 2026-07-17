@@ -412,12 +412,13 @@ def chatBot(query):
         speak("I did not catch that. Please try again.")
         return ""
 
+    web_fallback = _web_search_fallback_response(user_input)
+    if web_fallback:
+        speak(web_fallback)
+        return web_fallback
+
     selected_provider = get_selected_provider()
     if not selected_provider:
-        web_fallback = _web_search_fallback_response(user_input)
-        if web_fallback:
-            speak(web_fallback)
-            return web_fallback
         fallback = _offline_fallback_response(user_input) if ENABLE_OFFLINE_FALLBACK else "I could not get a response right now."
         speak(fallback)
         return fallback
@@ -449,11 +450,6 @@ def chatBot(query):
                 speak(provider_response)
                 return provider_response
 
-        web_fallback = _web_search_fallback_response(user_input)
-        if web_fallback:
-            speak(web_fallback)
-            return web_fallback
-
         fallback = _offline_fallback_response(user_input) if ENABLE_OFFLINE_FALLBACK else "I could not get a response right now."
         speak(fallback)
         return fallback
@@ -484,11 +480,6 @@ def chatBot(query):
         _chatbot = None
         _conversation_id = None
         print(f"Chatbot error: {e}")
-
-        web_fallback = _web_search_fallback_response(user_input)
-        if web_fallback:
-            speak(web_fallback)
-            return web_fallback
 
         if ENABLE_OFFLINE_FALLBACK:
             fallback = _offline_fallback_response(user_input)
